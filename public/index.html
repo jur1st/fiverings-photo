@@ -1,46 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.147.9"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FiveRings Photography</title>
+    <title>Five Rings Photography | Professional Photography Services</title>
+    <meta name="description" content="Five Rings Photography - Professional photography services including events, portraits, and antisocial street photography.">
+    
+    <!-- OpenGraph for social sharing -->
+    <meta property="og:title" content="Five Rings Photography">
+    <meta property="og:description" content="Professional photography services and antisocial street photography">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fiverings.photo">
+    <meta property="og:site_name" content="Five Rings Photography">
+    
+    <!-- Schema.org markup for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Five Rings Photography",
+        "url": "https://fiverings.photo",
+        "description": "Professional photography services",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Kansas City",
+            "addressRegion": "MO"
+        }
+    }
+    </script>
+    
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             padding: 2rem;
             line-height: 1.6;
-            background: #000;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 3.5rem;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .tagline {
+            font-size: 1.25rem;
+            color: #888;
+            margin-bottom: 4rem;
+            font-weight: 300;
+        }
+        
+        .services {
+            display: grid;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .service-card {
+            background: #111111;
+            border: 1px solid #222;
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .service-card:hover {
+            border-color: #FFD700;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.1);
+        }
+        
+        .service-card.active {
+            border-color: #FFD700;
+        }
+        
+        .service-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
             color: #fff;
         }
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
+        
+        .service-description {
+            color: #999;
+            font-size: 1rem;
+            line-height: 1.5;
         }
-        a {
+        
+        .service-status {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: #FFD700;
+            color: #000;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 1rem;
+            text-transform: uppercase;
+        }
+        
+        .service-status.coming-soon {
+            background: #333;
+            color: #888;
+        }
+        
+        .footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #222;
+            color: #666;
+            font-size: 0.875rem;
+        }
+        
+        .contact {
+            margin-top: 1rem;
+        }
+        
+        .contact a {
             color: #FFD700;
+            text-decoration: none;
+        }
+        
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            .logo {
+                font-size: 2.5rem;
+            }
+            
+            .tagline {
+                font-size: 1rem;
+            }
+            
+            .service-title {
+                font-size: 1.25rem;
+            }
+        }
+        
+        /* Future-ready animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .container {
+            animation: fadeIn 0.8s ease-out;
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <h1 class="logo">Five Rings</h1>
+        <p class="tagline">Professional Photography Services</p>
+        
+        <div class="services">
+            <a href="https://antisocial.fiverings.photo" class="service-card active">
+                <h2 class="service-title">Antisocial Gallery</h2>
+                <p class="service-description">
+                    Street photography without permission. Raw, unfiltered moments from the world around us.
+                    An ongoing exhibition of candid urban life.
+                </p>
+                <span class="service-status">Live Now</span>
+            </a>
+            
+            <div class="service-card">
+                <h2 class="service-title">Event Photography</h2>
+                <p class="service-description">
+                    Professional event coverage for conferences, conventions, and corporate gatherings.
+                    Specializing in technology and security events.
+                </p>
+                <span class="service-status coming-soon">Coming Soon</span>
+            </div>
+            
+            <div class="service-card">
+                <h2 class="service-title">Portrait Sessions</h2>
+                <p class="service-description">
+                    Individual and group portraits. Professional headshots, family sessions,
+                    and creative portrait work.
+                </p>
+                <span class="service-status coming-soon">Coming Soon</span>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 Five Rings Photography</p>
+            <div class="contact">
+                <p>Contact: <a href="mailto:john@fiverings.photo">john@fiverings.photo</a></p>
+            </div>
+        </div>
+    </div>
     
-<main>
-    <h1>FiveRings Photography</h1>
-    <h1 id="professional-photography-services">Professional Photography Services</h1>
-<p>Welcome to FiveRings Photography.</p>
-
-    
-    <nav style="margin-top: 3rem;">
-        <h2>Sections</h2>
-        <ul>
-            <li><a href="http://localhost:1313/defcon/">DEFCON Photography</a></li>
-            <li><a href="http://localhost:1313/goons/">Goons Gallery</a></li>
-            <li><a href="http://localhost:1313/about/">About</a></li>
-        </ul>
-    </nav>
-</main>
-
+    <!-- Future-ready: Service Worker registration placeholder -->
+    <script>
+        // Analytics placeholder
+        // Service worker registration will go here
+        // Dynamic content loading will go here
+    </script>
 </body>
 </html>
